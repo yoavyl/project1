@@ -1,0 +1,151 @@
+body {
+    background-image: url('BoardBackground.jpg');
+}
+
+form {
+    background-image: url('notebook.jpg');
+    background-repeat: repeat-y;
+    width: 800px;
+    text-align: center;
+    padding:auto;
+    margin:auto;
+    position: absolute;
+    top: 85;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.oldTasks {
+    background-image: url('stickynotes.png');
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    margin: 5px;
+    vertical-align: middle;
+    position :relative;
+}
+
+.oldTasks:last-child {
+    animation: fadeIn 3s;
+    animation-timing-function: linear;
+}
+
+.oldTasksAfterDelete {
+    background-image: url('stickynotes.png');
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    margin: 5px;
+    vertical-align: middle;
+    position :relative;
+}
+
+#tasksGrid {
+    position: absolute;
+    top: 460;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.taskDate {         
+    position: absolute;
+    bottom: 95;
+    left: 25;
+    font-size: 30;
+    font-weight: bold;
+}
+
+.taskText {
+    height: 150px;
+    position: relative;
+    margin-bottom: 50;
+    overflow: auto;
+}
+
+.top {
+    position: absolute;
+    top: 25;
+    right: 100;
+    background-color: red;
+
+}
+h1 {
+    font-family: 'Forte', cursive;
+    color: yellow;
+    position: absolute;
+    top: 30;
+    left: 48%;
+    transform: translateX(-50%);
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+i {
+    text-align: right;
+    display: none;          /* hidden until hover over its parent div/note */
+    position: absolute;
+    top: 40;
+    right: 10;
+  }
+
+.oldTasks:hover > i {
+    display: block;        /* block to hidden display -> not hidden */
+ }
+
+ [category="Community and HR"] {
+     background-color:limegreen;
+ }
+
+[category="Website and IT"] {
+    background-color: yellow;
+}
+
+[category="Business development"] {
+    background-color: orange;
+}
+
+[category="Design"] {
+   background-color: mediumpurple;
+}
+
+[category="PR"] {
+    background-color: steelblue;
+}
+
+[category="Legal"] {
+    background-color: deepskyblue;
+}
+
+[category="Management"] {
+   background-color: springgreen;
+}
+
+[category="Archive"] {
+    background-color: pink;
+}
+
+[category="Applications"] {
+   background-color: gray;
+}
+
+[category="priority"] {
+background-color: red;
+}
+
+td {
+    font-weight: bold;
+    color: gray;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    right: 0;
+}
